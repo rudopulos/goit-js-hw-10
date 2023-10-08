@@ -1,0 +1,15 @@
+.cat-container {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+    align-items: center; /* Alinează vertical elementele în centru */
+}
+
+.cat-image {
+    max-width: 50%; /* Lățimea maximă a imaginii */
+    margin-right: 20px; /* Spațiu între imagine și detaliile pisicii */
+}
+
+.cat-details {
+    flex-grow: 1; /* Detaliile ocupă tot spațiul disponibil din dreapta imaginii */
+}
