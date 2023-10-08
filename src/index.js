@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_KEY = "live_73TqQ9TPrGbniitCx8DQ6cc7IwyJuZYvQThVJQxW9Pgsx3UKpE60Vu67t9JppH64";
+const API_KEY = "live_GymnRAQGwsneAyhiyx7kN5wvUkhJUpnOj80W6a57M8BqYRRQYypWBuJ6C9T2JgY8";
 axios.defaults.headers.common["x-api-key"] = API_KEY;
 
 const breedSelect = document.querySelector(".breed-select");
@@ -56,14 +56,14 @@ async function fetchCatByBreed(breedId) {
     const catImage = document.createElement("img");
     catImage.src = catData.url;
     catImage.alt = catData.breeds[0].name;
-    catImage.className = "cat-image"; // Adăugați o clasă pentru a formata imaginea
+    catImage.className = "cat-image"; 
     const catDetails = document.createElement("div");
-    catDetails.className = "cat-details"; // Adăugați o clasă pentru a formata detaliile
+    catDetails.className = "cat-details"; 
     const catBreed = `<p>Breed: ${catData.breeds[0].name}</p>`;
     const catDescription = `<p>Description: ${catData.breeds[0].description}</p>`;
     const catTemperament = `<p>Temperament: ${catData.breeds[0].temperament}</p>`;
     catDetails.innerHTML = catBreed + catDescription + catTemperament;
-    catInfo.innerHTML = ""; // Golire containerul pentru a evita dublarea imaginii
+    catInfo.innerHTML = ""; 
     catInfo.appendChild(catImage);
     catInfo.appendChild(catDetails);
     showCatInfo();
